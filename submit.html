@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="submit.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Submit</title>
+
+    <!--==========================================================
+<script>
+
+</script>
+-->
+
+<style>
+
+:root {
+    --text-color: #4e300e;
+    --bg-color: #be7a2b;
+}
+
+.light {
+    --text-color: #be7a2b;
+    --bg-color: #4e300e;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: all 1s;
+}
+
+
+
+/* The switch - the box around the slider */
+.toggle {
+ font-size: 11px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.toggle input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: var(--text-color);
+ border: 2px solid var(--bg-color);
+ transition: 1s;
+ border-radius: 1px;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 1.3em;
+ width: 1.2em;
+ border-radius: 2px;
+ left: 0.2em;
+ bottom: 0.3em;
+ background-color: var(--text-color);
+ border: 2px solid var(--bg-color);
+ transition: 0.3s;
+}
+
+input:checked + .slider {
+ background-color: #be7a2b;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ transform: translateX(1.3em);
+}
+
+</style>
+
+
+</head>
+
+ <!--Loading Screen-->
+ 
+<body>
+
+    <section>
+        <label class="toggle">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+    </section>
+
+    <p style="  color: var(--text-color); ">Click!</p>
+   
+
+   <div class="box">
+    <div class="container">
+        
+        <div class="loader">
+        </div>
+
+        <div class="center">
+            <form action="home.html">
+            <button> Home </button>
+        </form>
+        </div>
+
+        <header>Go Back pls :(</header>
+
+            </div>
+        </div>
+    </div>
+</div>  
+
+
+<script>
+
+    const checkbox =
+    document.querySelector("input[type='checkbox']");
+    checkbox.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+    });
+        
+    </script>
+    
+
+</body>
+</html>

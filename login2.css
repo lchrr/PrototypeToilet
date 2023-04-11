@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    background: #be7a2b;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+span{
+    color: #000000;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+header{
+    color: #000000;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    margin-top: -7px;
+    margin-left: 10px;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: #3b1e1e;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+}
+i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #000000;
+}
+::-webkit-input-placeholder{
+    color: #000000;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background: rgba(112, 51, 15, 0.7);
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000000;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+}
+label a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+  .loader {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+
+
+  .loader::after {
+    content: '';
+    width: 48px;
+    height: 48px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 50% 0;
+    border: 15px solid rgb(73, 36, 36);
+    transform: rotate(45deg) translate(0, 0);
+    box-sizing: border-box;
+    animation: animMarker 0.4s ease-in-out infinite alternate;
+  }
+  
+  .loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150%;
+    width: 24px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animShadow 0.4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes animMarker {
+    0% {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    100% {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+  
+  @keyframes animShadow {
+    0% {
+      transform: scale(0.5);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+/*-------------------*/
+.switch {
+  --switch-width: 3.5em;
+  --switch-height: calc(var(--switch-width) / 2);
+  --left-ball-color: #4e300e;
+  --right-ball-color: #804c12;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  border-radius: calc(var(--switch-height) / 2);
+  background-color: var(--left-ball-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.switch input[type="checkbox"] {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.switch .left {
+  position: absolute;
+  width: calc(var(--switch-width) / 3);
+  height: calc(var(--switch-height) / 1.5);
+  background-color: var(--left-ball-color);
+  border-radius: 50%;
+  left: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.switch .right {
+  position: absolute;
+  width: calc(var(--switch-width) / 3);
+  height: calc(var(--switch-height) / 1.5);
+  background-color: var(--right-ball-color);
+  border-radius: 50%;
+  right: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.switch .switcher {
+  position: absolute;
+  width: calc(100% + var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--right-ball-color);
+  z-index: 1;
+  left: calc(-50% + var(--switch-width) / (3 * 2));
+  pointer-events: none;
+  transition: left 500ms ease;
+  border-top-left-radius: calc(var(--switch-width) / 3);
+  border-bottom-left-radius: calc(var(--switch-width) / 3);
+}
+
+.switch .switcher:before {
+  position: absolute;
+  content: '';
+  width: calc(var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--left-ball-color);
+  display: block;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: 2;
+}
+
+.switch .switcher:after {
+  position: absolute;
+  content: '';
+  width: calc(var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--right-ball-color);
+  display: block;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.switch input:checked ~ .switcher {
+  left: 100%;
+}
+
+.switch input:checked ~ .switcher:before {
+  display: none;
+}
+  
